@@ -1,0 +1,296 @@
+body {
+  background: #B3B3B3;
+  font-family: "Courier",monospace;
+  font-size: 0.15in;
+}
+#page,#cover {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  transform: scale(1);
+}
+#pages-container {
+  transition: 0.5s;
+}
+.A4 {
+  width: 21cm;
+  height: 29.7cm;
+}
+#editableSpace {
+  position: relative;
+  top: 1in;
+  height: 9.7in;
+  width: 6.2in;
+  margin-left: 1.5in;
+  margin-bottom: 1in;
+  border: 0;
+  outline: none;
+}
+#zoomControlls {
+  position: fixed;
+  bottom: 2.5vw;
+  right: 1vw;
+  width: 2vw;
+  height: 7.5vh;
+}
+#in,#out {
+  position: relative;
+  width: 1.8vw;
+  height: 1.8vw;
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  transition: 0.5s;
+}
+#in {
+  top: 0;
+  border-radius: 15% 15% 0 0;
+}
+#out {
+  top: -0.2vw;
+  border-radius: 0 0 15% 15%;
+}
+#pageCount {
+  position: fixed;
+  bottom: 0.5vw;
+  right: 1.3vw;
+  font-family: Arial, monospace;
+  font-size: 1vw;
+}
+#title,#subtitle,#written,#author {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 99%;
+  text-align: center;
+  border: 0;
+  outline: none;
+  font-family: 'Courier', monospace;
+  font-size: 0.15in;
+  transition: 0.75s;
+}
+#title { top: 38.5%; font-weight: bolder; text-transform: uppercase; }
+#subtitle { top: 43%; }
+#written { top: 47.25%; color: #36454f;}
+#author { top: 50%;}
+#info {
+  position: absolute;
+  bottom: 1in;
+  right: 1in;
+  height: 7.5vh;
+  width: 20vw;
+  text-align: right;
+  border: 0;
+  outline: none;
+}
+#basedOn {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  text-align: center;
+  border: 0;
+  outline: none;
+  font-family: 'Courier New', monospace;
+  font-size: 0.15in;
+  color: #36454f;
+}
+#cover-edit {
+  position: absolute;
+  right: 0.5in;
+  bottom: 1in;
+  height: 1.5vw;
+  transition: 0.5s;
+}
+#cover-edit:hover,#hideCover:hover {
+  cursor: pointer;
+  border-color: #808080;
+  fill: #808080;
+}
+#hideCover {
+  position: absolute;
+  right: 0.525in;
+  bottom: 0.6in;
+  height: 1.5vw;
+  transition: 0.5s
+}
+#plus,#minus {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 1.5vw;
+}
+#in:hover,#out:hover,#undo-background:hover,#search-background:hover {
+  cursor: pointer;
+  border-color: #808080;
+  fill: #808080;
+}
+#search-area:hover {
+  border-color: #808080;
+}
+#undo-background {
+  position: fixed;
+  bottom: 0.5vw;
+  right: -3.5vw;
+  width: 1.8vw;
+  height: 1.8vw;
+  background-color: white;
+  border-radius: 15%;
+  border: 2px solid #000000;
+  transition: 0.5s;
+}
+#undo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 1.5vw;
+}
+#search-background {
+  position: fixed;
+  bottom: 7vw;
+  right: 0.95vw;
+  width: 1.8vw;
+  height: 1.8vw;
+  border-radius: 15%;
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  transition: 0.5s;
+}
+#search {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 1.5vw;
+}
+#search-area {
+  position: fixed;
+  right: 2vw;
+  bottom: 7vw;
+  width: 0;
+  height: 1.7vw;
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  transition: 1s;
+  font-family: 'Courier New', monospace;
+  font-size: 1vw;
+  outline: none;
+}
+#sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5vw;
+  background-color: #FFFFFF;
+  opacity: 10%;
+  transition: 0.5s;
+}
+#sidebar:hover {
+  opacity: 50%;
+}
+#export:hover,#import:hover {
+  cursor: pointer;
+  opacity: 95%;
+}
+#export,#import {
+  position: absolute;
+  height: 7.5vh;
+  left: 50%;
+}
+#export {
+  transform: translate(-50%);
+  bottom: 1vw;
+}
+#import {
+  transform: translate(-50%);
+  bottom: 5.5vw;
+}
+#cover-settings {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  height: 25vh;
+  width: 35vw;
+  background-color: #FFF;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  font-family: Arial, monospace;
+  overflow: scroll;
+}
+#exit {
+  position: absolute;
+  top: 0.5vw;
+  right: 1vw;
+  font-weight: bolder;
+  font-size: 1.5vw;
+  transition: 0.5s;
+}
+#exit:hover {
+  cursor: pointer;
+  color: #808080;
+}
+#title1 {
+  position: absolute;
+  top: 0.5vw;
+  left: 1vw;
+  font-size: 2vw;
+  text-decoration: underline;
+}
+#desc1 {
+  position: absolute;
+  top: 3vw;
+  left: 1.5vw;
+  font-size: 1vw;
+}
+#button1 {
+  position: absolute;
+  top: 2.95vw;
+  right: 1.5vw;
+  border: 2px solid #000000;
+  background-color: #FFF;
+  transition: 0.5s;
+}
+#button1:hover,#button2:hover {
+  cursor: pointer;
+  border-color: #808080;
+  color: #808080;
+}
+#title2 {
+  position: absolute;
+  top: 4.5vw;
+  left: 1vw;
+  font-size: 2vw;
+  text-decoration: underline;
+}
+#desc2 {
+  position: absolute;
+  top: 7vw;
+  left: 1.5vw;
+  font-size: 1vw;
+}
+#button2 {
+  position: absolute;
+  top: 6.95vw;
+  right: 1.5vw;
+  border: 2px solid #000000;
+  background-color: #FFF;
+  transition: 0.5s;
+}
+#coverButton {
+  position: fixed;
+  top: 1vw;
+  right: -5vw;
+  height: 7.5vh;
+  fill: #FFF;
+  transition: 0.5s;
+  opacity: 25%;
+}
+#coverButton:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
