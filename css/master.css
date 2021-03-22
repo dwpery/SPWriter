@@ -25,15 +25,12 @@ body {
   width: 6.2in;
   margin-left: 1.5in;
   margin-bottom: 1in;
-  border: 0;
   outline: none;
 }
 #zoomControlls {
   position: fixed;
-  bottom: 2.5vw;
+  bottom: 4vh;
   right: 1vw;
-  width: 2vw;
-  height: 7.5vh;
 }
 #in,#out {
   position: relative;
@@ -43,14 +40,8 @@ body {
   border: 2px solid #000000;
   transition: 0.5s;
 }
-#in {
-  top: 0;
-  border-radius: 15% 15% 0 0;
-}
-#out {
-  top: -0.2vw;
-  border-radius: 0 0 15% 15%;
-}
+#in { top: 0; border-radius: 15% 15% 0 0; }
+#out { top: -0.2vw; border-radius: 0 0 15% 15%; }
 #pageCount {
   position: fixed;
   bottom: 0.5vw;
@@ -58,7 +49,7 @@ body {
   font-family: Arial, monospace;
   font-size: 1vw;
 }
-#title,#subtitle,#written,#author {
+#title,#subtitle,#written,#author,#basedOn {
   position: absolute;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -81,22 +72,9 @@ body {
   height: 7.5vh;
   width: 20vw;
   text-align: right;
-  border: 0;
   outline: none;
 }
-#basedOn {
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%,-50%);
-  width: 60%;
-  text-align: center;
-  border: 0;
-  outline: none;
-  font-family: 'Courier New', monospace;
-  font-size: 0.15in;
-  color: #36454f;
-}
+#basedOn { top: 60%; width: 60%; color: #36454f; }
 #cover-edit {
   position: absolute;
   right: 0.5in;
@@ -123,11 +101,7 @@ body {
   transform: translate(-50%,-50%);
   height: 1.5vw;
 }
-#in:hover,#out:hover,#undo-background:hover,#search-background:hover {
-  cursor: pointer;
-  border-color: #808080;
-  fill: #808080;
-}
+#in:hover,#out:hover,#undo-background:hover,#search-background:hover { cursor: pointer; border-color: #808080; fill: #808080; }
 #search-area:hover {
   border-color: #808080;
 }
@@ -183,33 +157,22 @@ body {
 #sidebar {
   position: fixed;
   left: 0;
-  top: 0;
   height: 100%;
   width: 5vw;
   background-color: #FFFFFF;
   opacity: 10%;
   transition: 0.5s;
 }
-#sidebar:hover {
-  opacity: 50%;
-}
-#export:hover,#import:hover {
-  cursor: pointer;
-  opacity: 95%;
-}
+#sidebar:hover { opacity: 50%; }
+#export:hover,#import:hover { cursor: pointer; }
 #export,#import {
   position: absolute;
   height: 7.5vh;
   left: 50%;
-}
-#export {
   transform: translate(-50%);
-  bottom: 1vw;
 }
-#import {
-  transform: translate(-50%);
-  bottom: 5.5vw;
-}
+#export { bottom: 1vw; }
+#import { bottom: 5.5vw; }
 #cover-settings {
   position: fixed;
   top: 0;
@@ -234,20 +197,22 @@ body {
   cursor: pointer;
   color: #808080;
 }
-#title1 {
+#title1,#title2 {
   position: absolute;
   top: 0.5vw;
   left: 1vw;
   font-size: 2vw;
   text-decoration: underline;
 }
-#desc1 {
+#title2 { top: 4.5vw; }
+#desc1,#desc2 {
   position: absolute;
   top: 3vw;
   left: 1.5vw;
   font-size: 1vw;
 }
-#button1 {
+#desc2 { top: 7vw; }
+#button1,#button2 {
   position: absolute;
   top: 2.95vw;
   right: 1.5vw;
@@ -255,31 +220,11 @@ body {
   background-color: #FFF;
   transition: 0.5s;
 }
+#button2 { top: 6.95vw; }
 #button1:hover,#button2:hover {
   cursor: pointer;
   border-color: #808080;
   color: #808080;
-}
-#title2 {
-  position: absolute;
-  top: 4.5vw;
-  left: 1vw;
-  font-size: 2vw;
-  text-decoration: underline;
-}
-#desc2 {
-  position: absolute;
-  top: 7vw;
-  left: 1.5vw;
-  font-size: 1vw;
-}
-#button2 {
-  position: absolute;
-  top: 6.95vw;
-  right: 1.5vw;
-  border: 2px solid #000000;
-  background-color: #FFF;
-  transition: 0.5s;
 }
 #coverButton {
   position: fixed;
