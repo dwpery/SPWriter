@@ -32,8 +32,10 @@ setInterval(function() {
   }
   if(coverstatus===false) {
     $("#coverButton").css("right","1vw")
+    $("#formating").css("top","6vw")
   } else if(coverstatus===true) {
     $("#coverButton").css("right","-3vw")
+    $("#formating").css("top","0.95vw")
   }
 },250)
 function resetZoom() {
