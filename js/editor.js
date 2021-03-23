@@ -57,6 +57,7 @@ function searchScript() {
 }
 function coverSettingsCntrl() {
   $("#cover-settings").slideToggle(500);
+  console.log("yes");
 }
 function toggleSub() {
   if(subtitle===true) {
