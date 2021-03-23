@@ -156,6 +156,7 @@ body {
 }
 #sidebar {
   position: fixed;
+  top: 0;
   left: 0;
   height: 100%;
   width: 5vw;
@@ -167,12 +168,12 @@ body {
 #export:hover,#import:hover { cursor: pointer; }
 #export,#import {
   position: absolute;
-  height: 7.5vh;
+  height: 8vh;
   left: 50%;
   transform: translate(-50%);
 }
-#export { bottom: 1vw; }
-#import { bottom: 5.5vw; }
+#export { bottom: 2.5vh; }
+#import { bottom: 12vh; }
 #cover-settings {
   position: fixed;
   top: 0;
