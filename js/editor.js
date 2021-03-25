@@ -3,6 +3,7 @@ var subtitle = true;
 var currentPage = 0;
 var basedOn = true;
 var coverstatus = true;
+var fomCntrl = false;
 var totalPages = 0;
 var zoom = 1;
 window.onload=function() {
@@ -93,4 +94,18 @@ function coverShow() {
   $("#cover").show();
   coverstatus = true;
 }
-
+function fom() {
+  if(fomCntrl===false) {
+    $("#fom").css("height","7.5vw");
+    $("#fom").css("right","2.9vw");
+    $("#fom").css("width","10vw");
+    $("#formating-icon").css("border-radius", "0 15% 15% 0");
+    fomCntrl = true;
+  } else if(fomCntrl===true) {
+    $("#fom").css("height","0");
+    $("#fom").css("width","0");
+    $("#fom").css("right","2.5vw");
+    $("#formating-icon").css("border-radius", "15%");
+    fomCntrl = false;
+  }
+}
