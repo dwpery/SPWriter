@@ -259,3 +259,7 @@ body {
   transition: 0.5s;
   z-index: 1;
 }
+#icon {
+  position: absolute;
+  height: 1.25vw;
+}
