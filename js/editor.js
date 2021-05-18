@@ -32,11 +32,9 @@ setInterval(function() {
     $("#undo-background").css("right", "-3.5vw");
   }
   if(coverstatus===false) {
-    $("#coverButton").css("right","1vw")
-    $("#formating-icon").css("top","6vw")
+    $("#coverButton").css("right","4vw")
   } else if(coverstatus===true) {
     $("#coverButton").css("right","-3vw")
-    $("#formating-icon").css("top","0.95vw")
   }
 },250)
 function resetZoom() {
