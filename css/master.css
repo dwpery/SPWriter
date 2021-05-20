@@ -3,6 +3,7 @@ body {
   font-family: "Courier",monospace;
   font-size: 0.15in;
 }
+
 #page,#cover {
   background: white;
   display: block;
@@ -11,13 +12,16 @@ body {
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
   transform: scale(1);
 }
+
 #pages-container {
   transition: 0.5s;
 }
+
 .A4 {
   width: 21cm;
   height: 29.7cm;
 }
+
 #editableSpace {
   position: relative;
   top: 1in;
@@ -27,11 +31,13 @@ body {
   margin-bottom: 1in;
   outline: none;
 }
+
 #zoomControlls {
   position: fixed;
   bottom: 4vh;
   right: 1vw;
 }
+
 #in,#out {
   position: relative;
   width: 1.8vw;
@@ -42,6 +48,7 @@ body {
 }
 #in { top: 0; border-radius: 15% 15% 0 0; }
 #out { top: -0.2vw; border-radius: 0 0 15% 15%; }
+
 #pageCount {
   position: fixed;
   bottom: 0.5vw;
@@ -49,6 +56,7 @@ body {
   font-family: Arial, monospace;
   font-size: 1vw;
 }
+
 #title,#subtitle,#written,#author,#basedOn {
   position: absolute;
   left: 50%;
@@ -65,6 +73,7 @@ body {
 #subtitle { top: 43%; }
 #written { top: 47.25%; color: #36454f;}
 #author { top: 50%;}
+
 #info {
   position: absolute;
   bottom: 1in;
@@ -74,7 +83,9 @@ body {
   text-align: right;
   outline: none;
 }
+
 #basedOn { top: 60%; width: 60%; color: #36454f; }
+
 #cover-edit {
   position: absolute;
   right: 0.5in;
@@ -82,11 +93,13 @@ body {
   height: 1.5vw;
   transition: 0.5s;
 }
+
 #cover-edit:hover,#hideCover:hover {
   cursor: pointer;
   border-color: #808080;
   fill: #808080;
 }
+
 #hideCover {
   position: absolute;
   right: 0.525in;
@@ -94,6 +107,7 @@ body {
   height: 1.5vw;
   transition: 0.5s
 }
+
 #plus,#minus {
   position: absolute;
   left: 50%;
@@ -101,10 +115,17 @@ body {
   transform: translate(-50%,-50%);
   height: 1.5vw;
 }
-#in:hover,#out:hover,#undo-background:hover,#search-background:hover,#formating-icon:hover { cursor: pointer; border-color: #808080; fill: #808080; }
+
+#in:hover,#out:hover,#undo-background:hover,#search-background:hover,#formating-icon:hover {
+  cursor: pointer;
+  border-color: #808080;
+  fill: #808080;
+}
+
 #search-area:hover {
   border-color: #808080;
 }
+
 #undo-background {
   position: fixed;
   bottom: 0.5vw;
@@ -116,6 +137,7 @@ body {
   border: 2px solid #000000;
   transition: 0.5s;
 }
+
 #undo {
   position: absolute;
   left: 50%;
@@ -123,6 +145,7 @@ body {
   transform: translate(-50%,-50%);
   height: 1.5vw;
 }
+
 #search-background,#formating-icon {
   position: fixed;
   bottom: 7vw;
@@ -134,7 +157,9 @@ body {
   border: 2px solid #000000;
   transition: 0.5s;
 }
+
 #formating-icon {top: 0.95vw; z-index: 2;}
+
 #search {
   position: relative;
   left: 50%;
@@ -142,6 +167,7 @@ body {
   transform: translate(-50%,-50%);
   height: 1.5vw;
 }
+
 #search-area {
   position: fixed;
   right: 2vw;
@@ -155,26 +181,7 @@ body {
   font-size: 1vw;
   outline: none;
 }
-#sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 5vw;
-  background-color: #FFFFFF;
-  opacity: 10%;
-  transition: 0.5s;
-}
-#sidebar:hover { opacity: 50%; }
-#export:hover,#import:hover { cursor: pointer; }
-#export,#import {
-  position: absolute;
-  height: 8vh;
-  left: 50%;
-  transform: translate(-50%);
-}
-#export { bottom: 2.5vh; }
-#import { bottom: 12vh; }
+
 #cover-settings {
   position: fixed;
   top: 0;
@@ -187,6 +194,7 @@ body {
   font-family: Arial, monospace;
   overflow: scroll;
 }
+
 #exit {
   position: absolute;
   top: 0.5vw;
@@ -195,10 +203,12 @@ body {
   font-size: 1.5vw;
   transition: 0.5s;
 }
+
 #exit:hover {
   cursor: pointer;
   color: #808080;
 }
+
 #title1,#title2 {
   position: absolute;
   top: 0.5vw;
@@ -206,14 +216,18 @@ body {
   font-size: 2vw;
   text-decoration: underline;
 }
+
 #title2 { top: 4.5vw; }
+
 #desc1,#desc2 {
   position: absolute;
   top: 3vw;
   left: 1.5vw;
   font-size: 1vw;
 }
+
 #desc2 { top: 7vw; }
+
 #button1,#button2 {
   position: absolute;
   top: 2.95vw;
@@ -222,12 +236,15 @@ body {
   background-color: #FFF;
   transition: 0.5s;
 }
+
 #button2 { top: 6.95vw; }
+
 #button1:hover,#button2:hover {
   cursor: pointer;
   border-color: #808080;
   color: #808080;
 }
+
 #coverButton {
   position: fixed;
   bottom: 1vw;
@@ -237,10 +254,12 @@ body {
   transition: 0.5s;
   opacity: 25%;
 }
+
 #coverButton:hover {
   cursor: pointer;
   opacity: 100%;
 }
+
 #current {
   position: absolute;
   left: 50%;
@@ -248,6 +267,7 @@ body {
   transform: translate(-50%,-50%);
   height: 1.7vw;
 }
+
 #fom {
   position: fixed;
   top: 0.95vw;
@@ -259,6 +279,7 @@ body {
   transition: 0.5s;
   z-index: 1;
 }
+
 #icon {
   position: absolute;
   height: 1.25vw;
