@@ -8,13 +8,13 @@ var fomCntrl = false; // Controls format menu state
 var totalPages = null; // Contains the total amount of pages
 var zoom = 1; // Contains current zoom value
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction()}; // Calls scroll function when page scrolls
 
 function scrollFunction() {
   if (document.body.scrollTop > 1100 || document.documentElement.scrollTop > 1100) {
-    $("#backToTop").css("right","0.95vw");
+    $("#backToTop").css("right","0.95vw"); // Moves Back to Top button off screen
   } else {
-    $("#backToTop").css("right","-3vw");
+    $("#backToTop").css("right","-3vw"); // Moves Back to Top button on screen
   }
 }
 
