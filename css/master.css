@@ -246,8 +246,8 @@ body {
 
 #coverButton {
   position: fixed;
-  bottom: 3vw;
-  right: -3vw;
+  top: 1vw;
+  left: -3vw;
   height: 7.5vh;
   fill: #FFF;
   transition: 0.5s;

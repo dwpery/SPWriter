@@ -19,8 +19,8 @@ function scrollFunction() {
 }
 
 function topFunction() {
-    document.body.scrollTop = 0; // Safari
-    document.documentElement.scrollTop = 0; //Chromium
+  document.body.scrollTop = 0; // Safari
+  document.documentElement.scrollTop = 0; //Chromium
 }
 
 window.onload = function() {
@@ -50,9 +50,9 @@ setInterval(function() {
   }
   // Controls cover buttons position
   if (coverstatus === false) {
-    $("#coverButton").css("right","4vw") // Cover button on screen
+    $("#coverButton").css("left","1vw") // Cover button on screen
   } else if (coverstatus === true) {
-    $("#coverButton").css("right","-3vw") // Cover button off screen
+    $("#coverButton").css("left","-3vw") // Cover button off screen
   }
 },250)
 
