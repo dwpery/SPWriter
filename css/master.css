@@ -83,7 +83,6 @@ body {
   text-align: right;
   outline: none;
 }
-
 #basedOn { top: 60%; width: 60%; color: #36454f; }
 
 #cover-edit {
@@ -116,7 +115,7 @@ body {
   height: 1.5vw;
 }
 
-#in:hover,#out:hover,#undo-background:hover,#search-background:hover,#formating-icon:hover {
+#in:hover,#out:hover,#undo-background:hover,#search-background:hover,#formating-icon:hover,#backToTop:hover {
   cursor: pointer;
   border-color: #808080;
   fill: #808080;
@@ -146,7 +145,7 @@ body {
   height: 1.5vw;
 }
 
-#search-background,#formating-icon {
+#search-background,#formating-icon,#backToTop {
   position: fixed;
   bottom: 7vw;
   right: 0.95vw;
@@ -157,8 +156,8 @@ body {
   border: 2px solid #000000;
   transition: 0.5s;
 }
-
 #formating-icon {top: 0.95vw; z-index: 2;}
+#backToTop {top: 3.5vw; right: -3vw;}
 
 #search {
   position: relative;
@@ -283,4 +282,12 @@ body {
 #icon {
   position: absolute;
   height: 1.25vw;
+}
+
+#bttIcon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 2.5vw;
 }

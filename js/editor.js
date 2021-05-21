@@ -8,6 +8,21 @@ var fomCntrl = false; // Controls format menu state
 var totalPages = null; // Contains the total amount of pages
 var zoom = 1; // Contains current zoom value
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 1100 || document.documentElement.scrollTop > 1100) {
+    $("#backToTop").css("right","0.95vw");
+  } else {
+    $("#backToTop").css("right","-3vw");
+  }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0; // Safari
+    document.documentElement.scrollTop = 0; //Chromium
+}
+
 window.onload = function() {
   $("#cover-settings").hide(); // Hides cover settings menu
   totalPages = $('div#page').length; // Gets amount of pages
