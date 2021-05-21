@@ -115,10 +115,11 @@ body {
   height: 1.5vw;
 }
 
-#in:hover,#out:hover,#undo-background:hover,#search-background:hover,#formating-icon:hover,#backToTop:hover {
+#in:hover,#out:hover,#undo-background:hover,#search-background:hover,#formating-icon:hover,#backToTop:hover,#scene:hover,#action:hover,#character:hover,#parenthesis:hover,#diaulogue:hover,#shot:hover {
   cursor: pointer;
   border-color: #808080;
   fill: #808080;
+  color: #808080;
 }
 
 #search-area:hover {
@@ -284,6 +285,9 @@ body {
   position: relative;
   height: 1.5vw;
   margin-bottom: .1vw;
+  font-weight: bolder;
+  font-size: 1.3vw;
+  letter-spacing: -3px;
 }
 
 #bttIcon {
@@ -292,4 +296,13 @@ body {
   top: 50%;
   transform: translate(-50%,-50%);
   height: 2.5vw;
+}
+
+#scene,#action,#character,#parenthesis,#diaulogue,#shot {
+  transition: .5s;
+}
+
+#fomLabel {
+  margin-left: 2vw;
+  margin-top: -1.5vw;
 }
