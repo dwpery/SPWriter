@@ -54,6 +54,11 @@ setInterval(function() {
   } else if (coverstatus === true) {
     $("#coverButton").css("left","-3vw") // Cover button off screen
   }
+  // Controls Page Container
+  currentPage = Number(String(document.documentElement.scrollTop).charAt(0)); // Gets the 1st value of the scroll
+  if (document.documentElement.scrollTop <= 1100) { currentPage = 0; } // If user on cover dont show a count
+  if (coverstatus == false) { currentPage += 1 } // Adds 1 to count when cover is hidden
+  $("#pageCount").html(currentPage + "/" + totalPages); // Prints amount of pages
 },250)
 
 function resetZoom() {
