@@ -29,7 +29,7 @@ body {
   width: 6.2in;
   margin-left: 1.5in;
   margin-bottom: 1in;
-  /*outline: none;*/
+  outline: none;
 }
 
 #zoomControlls {
