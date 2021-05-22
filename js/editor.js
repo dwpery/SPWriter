@@ -54,7 +54,7 @@ setInterval(function() {
   } else if (coverstatus === true) {
     $("#coverButton").css("left","-3vw") // Cover button off screen
   }
-  // Controls Page Container
+  // Controls Page Counter Code
   currentPage = Number(String(document.documentElement.scrollTop).charAt(0)); // Gets the 1st value of the scroll
   if (document.documentElement.scrollTop <= 1100) { currentPage = 0; } // If user on cover dont show a count
   if (coverstatus == false) { currentPage += 1 } // Adds 1 to count when cover is hidden
