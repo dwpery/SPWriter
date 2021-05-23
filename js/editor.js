@@ -11,6 +11,12 @@ var currentFormat = 1; // Contains current format option
 
 window.onscroll = function() {scrollFunction()}; // Calls scroll function when page scrolls
 
+document.addEventListener("keydown", function (e) {
+    if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+        newLine(currentFormat);
+    }
+});
+
 function scrollFunction() {
   if (document.body.scrollTop > 1100 || document.documentElement.scrollTop > 1100) {
     $("#backToTop").css("right","0.95vw"); // Moves Back to Top button off screen
@@ -139,7 +145,7 @@ function fom() {
 }
 
 function setFormat(x) {
-  // X is set by function call
+  // Changes current format icon depending on one selected
   if (x == 0) {
     $("#formating-icon").html('<svg viewBox="0 0 512 512" id="current"><path d="M464 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM112 120c-30.928 0-56 25.072-56 56s25.072 56 56 56 56-25.072 56-56-25.072-56-56-56zM64 384h384V272l-87.515-87.515c-4.686-4.686-12.284-4.686-16.971 0L208 320l-55.515-55.515c-4.686-4.686-12.284-4.686-16.971 0L64 336v48z" /></svg>');
   } else if (x == 1) {
@@ -156,17 +162,36 @@ function setFormat(x) {
   currentFormat = x; // Sets value of currentFormat to X
 }
 
-function writing() {
+function writing(z) {
+  console.log($('#editableSpace').html());
+  if ($('#editableSpace').html() == "") {
+    if (currentFormat == 0) {
+      $("#editableSpace").append('<div contenteditable class="scene">int.</div>')
+    } else if (currentFormat == 1) {
+      $("#editableSpace").append('<div contenteditable class="action">...</div>')
+    } else if (currentFormat == 2) {
+      $("#editableSpace").append('<div contenteditable class="character">john doe</div>')
+    } else if (currentFormat == 3) {
+      $("#editableSpace").append('<div contenteditable class="parenthesis">()</div>')
+    } else if (currentFormat == 4) {
+      $("#editableSpace").append('<div contenteditable class="dialogue">...</div>')
+    } else if (currentFormat == 5) {
+      alert("Shot");
+    }
+  }
+}
+
+function newLine(x) {
   if (currentFormat == 0) {
-    alert("Scene");
+    $("#editableSpace").append('<div contenteditable class="scene">int.</div>')
   } else if (currentFormat == 1) {
-    alert("Action");
+    $("#editableSpace").append('<div contenteditable class="action">...</div>')
   } else if (currentFormat == 2) {
-    alert("Character");
+    $("#editableSpace").append('<div contenteditable class="character">john doe</div>')
   } else if (currentFormat == 3) {
-    alert("Parenthesis");
+    $("#editableSpace").append('<div contenteditable class="parenthesis">()</div>')
   } else if (currentFormat == 4) {
-    alert("Dialogue");
+    $("#editableSpace").append('<div contenteditable class="dialogue">...</div>')
   } else if (currentFormat == 5) {
     alert("Shot");
   }
