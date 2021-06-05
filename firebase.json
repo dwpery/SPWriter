@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "spwriter",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
