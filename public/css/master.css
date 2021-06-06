@@ -31,6 +31,34 @@ body {
   outline: none;
 }
 
+#title,#subtitle,#written,#author,#basedOn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 99%;
+  text-align: center;
+  border: 0;
+  outline: none;
+  font-family: 'Courier', monospace;
+  font-size: 0.15in;
+  transition: 0.75s;
+}
+#title { top: 38.5%; font-weight: bolder; text-transform: uppercase; }
+#subtitle { top: 43%; }
+#written { top: 47.25%; color: #36454f;}
+#author { top: 50%;}
+#basedOn { top: 60%; width: 60%; color: #36454f; }
+#info {
+  position: absolute;
+  bottom: 1in;
+  right: 1in;
+  height: 7.5vh;
+  width: 20vw;
+  text-align: right;
+  outline: none;
+  font-family: 'Courier', monospace;
+}
+
 .footer {
   position: fixed;
   bottom: 0;

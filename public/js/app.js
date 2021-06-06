@@ -21,6 +21,12 @@ setInterval(function() {
   } else if (zoom == 1) {
     $(".reset").css("right", "-5vh"); // Reset button of screen
   }
+  // Controls cover visibility
+  if (coverstatus == false) {
+    $(".cover").hide();
+  } else {
+    $(".cover").show();
+  }
   // Controls Page Counter Code
   currentPage = Number(String(document.documentElement.scrollTop).charAt(0)); // Gets the 1st value of the scroll
   if (document.documentElement.scrollTop <= 1100) { currentPage = 0; } // If user on cover dont show a count
