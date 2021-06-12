@@ -55,3 +55,11 @@ function resetZoom() {
   $("#pages-container").css("transform", "scale("+zoom+")"); // Applys zoom value
   $(".zoom-value").html(Math.trunc(zoom * 100)); // Prints zoom value to UI
 }
+
+function coverFunc() {
+  if (coverstatus === true) {
+    coverstatus = false;
+  } else {
+    coverstatus = true;
+  }
+}
