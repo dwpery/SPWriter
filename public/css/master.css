@@ -196,3 +196,15 @@ body {
   border-radius: 5px;
   background-color: #FFF;
 }
+
+.log-in {
+  position: fixed;
+  z-index: 10;
+  width: 10vh;
+  height: 5vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #FFF;
+  box-shadow: 0 0 50cm rgba(0,0,0,0.5);
+}
