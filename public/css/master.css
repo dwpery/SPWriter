@@ -92,7 +92,7 @@ body {
   font-size: 3vh;
 }
 
-.accountLogo {
+#accountLogo {
   position: fixed;
   right: 2vh;
   top: 1vh;
@@ -197,14 +197,23 @@ body {
   background-color: #FFF;
 }
 
-.log-in {
+#log-in {
   position: fixed;
   z-index: 10;
-  width: 10vh;
-  height: 5vh;
+  width: 75vh;
+  height: 20vh;
+  text-align: center;
+  border-radius: 15px;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
   background-color: #FFF;
-  box-shadow: 0 0 50cm rgba(0,0,0,0.5);
+  box-shadow: 0 0 0.2cm rgba(0,0,0,0.5);
 }
+
+ #signInBtn {
+   height: 7.01262272089761vh;
+ }
+ #signInBtn:hover {cursor: pointer;}
+
+span { color: blue; }
