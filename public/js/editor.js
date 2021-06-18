@@ -3,7 +3,7 @@ var searchCntrl = false;
 var subtitle = true; // Controls wether subtitle is active or not
 var currentPage = 0; // Contains the current page number
 var basedOn = true; // Controls wether the based on section is active or not
-var coverstatus = true; // Controls wether cover is shown or not
+var coverstatus = false; // Controls wether cover is shown or not
 var fomCntrl = false; // Controls format menu state
 var totalPages = null; // Contains the total amount of pages
 var zoom = 1; // Contains current zoom value
@@ -31,7 +31,7 @@ setInterval(function() {
   currentPage = Number(String(document.documentElement.scrollTop).charAt(0)); // Gets the 1st value of the scroll
   if (document.documentElement.scrollTop <= 1100) { currentPage = 0; } // If user on cover dont show a count
   if (coverstatus == false) { currentPage += 1 } // Adds 1 to count when cover is hidden
-  $(".page-counter").html(currentPage + "/" + totalPages); // Prints amount of pages
+  $(".page-counter").html(currentPage + "/" + (totalPages-1)); // Prints amount of pages
 },250);
 
 function zoomIn() {

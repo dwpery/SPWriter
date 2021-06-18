@@ -21,7 +21,7 @@ body {
   transition: 0.5s;
 }
 
-.editableSpace {
+#editableSpace {
   position: relative;
   top: 1in;
   height: 9.7in;
@@ -102,6 +102,7 @@ body {
   background-color: grey;
   box-shadow: 0 0 0.2cm rgba(0,0,0,0.5);
 }
+#accountLogo:hover {cursor: pointer;}
 
 .zoom-controls {
   position: fixed;
@@ -211,9 +212,10 @@ body {
   box-shadow: 0 0 0.2cm rgba(0,0,0,0.5);
 }
 
- #signInBtn {
+ #signInWithGoogle,#signInWithGithub {
    height: 7.01262272089761vh;
  }
- #signInBtn:hover {cursor: pointer;}
+ #signInWithGithub {border-radius: 12.5px;}
+ #signInWithGoogle:hover,#signInWithGithub:hover {cursor: pointer;}
 
 span { color: blue; }
