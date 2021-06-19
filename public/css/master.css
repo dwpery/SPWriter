@@ -210,12 +210,16 @@ body {
   transform: translate(-50%,-50%);
   background-color: #FFF;
   box-shadow: 0 0 0.2cm rgba(0,0,0,0.5);
+  height: 27.5vh;
 }
+
+h1 {
+  font-size: 5vh;
+}
+span { color: blue; }
 
  #signInWithGoogle,#signInWithGithub {
    height: 7.01262272089761vh;
  }
  #signInWithGithub {border-radius: 12.5px;}
  #signInWithGoogle:hover,#signInWithGithub:hover {cursor: pointer;}
-
-span { color: blue; }
