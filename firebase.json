@@ -4,6 +4,8 @@
   },
   "hosting": {
     "public": "public",
+    "site": "spwriter",
+    "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",
