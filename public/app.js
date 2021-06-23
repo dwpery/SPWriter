@@ -21,6 +21,7 @@ auth.onAuthStateChanged(user => {
         // signed in
         whenSignedIn.hidden = false;
         whenSignedOut.hidden = true;
+        $("#author").val(user.displayName);
         $(".rightSideTools").append('<img src="'+user.photoURL+'" id="accountLogo">')
     } else {
         // not signed in
