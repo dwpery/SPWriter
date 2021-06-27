@@ -1,4 +1,5 @@
 const auth = firebase.auth();
+const date = new Date();
 
 const whenSignedIn = document.getElementById('main');
 const whenSignedOut = document.getElementById('log-in');
@@ -22,7 +23,8 @@ auth.onAuthStateChanged(user => {
         whenSignedIn.hidden = false;
         whenSignedOut.hidden = true;
         $("#author").val(user.displayName);
-        $(".rightSideTools").append('<img src="'+user.photoURL+'" id="accountLogo">')
+        $(".rightSideTools").append('<img src="'+user.photoURL+'" id="accountLogo">');
+        $("#info").html("Draft 1<br>"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>"+user.email);
     } else {
         // not signed in
         whenSignedIn.hidden = true;

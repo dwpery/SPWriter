@@ -35,9 +35,13 @@ setInterval(function() {
 },250);
 
 function zoomIn() {
-  zoom += 0.1; // Increases zoom by 10%
-  $("#pages-container").css("transform", "scale("+zoom+")"); // Applys zoom value
-  $(".zoom-value").html(Math.trunc(zoom * 100)); // Prints zoom value to UI
+  if (zoom > 2) {
+    // Catches zoom so it doesn't go above 2
+  } else {
+    zoom += 0.1; // Increases zoom by 10%
+    $("#pages-container").css("transform", "scale("+zoom+")"); // Applys zoom value
+    $(".zoom-value").html(Math.trunc(zoom * 100)); // Prints zoom value to UI
+  }
 }
 
 function zoomOut() {
