@@ -6,7 +6,6 @@ const whenSignedOut = document.getElementById('log-in');
 
 const google = document.getElementById('signInWithGoogle');
 const github = document.getElementById('signInWithGithub');
-const signOutBtn = document.getElementById('signOutBtn')
 
 const googleAuth = new firebase.auth.GoogleAuthProvider();
 const githubAuth = new firebase.auth.GithubAuthProvider();
@@ -15,7 +14,6 @@ const githubAuth = new firebase.auth.GithubAuthProvider();
 
 google.onclick = () => auth.signInWithPopup(googleAuth);
 github.onclick = () => auth.signInWithPopup(githubAuth);
-signOutBtn.onclick = () => auth.signOut();
 
 auth.onAuthStateChanged(user => {
     if (user) {

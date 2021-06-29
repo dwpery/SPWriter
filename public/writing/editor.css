@@ -29,6 +29,8 @@ body {
   margin-left: 1.5in;
   margin-bottom: 1in;
   outline: none;
+  font-family: "Courier", monospace;
+  font-size: 0.15in;
 }
 
 #title,#subtitle,#written,#author,#basedOn {
