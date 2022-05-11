@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/8.6.7/firebase-app.js"></script>
-    <script src="/__/firebase/8.6.7/firebase-auth.js"></script>
-    <script src="/__/firebase/8.6.7/firebase-analytics.js"></script>
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
-    <meta charset="utf-8">
-    <title>Home | SPWriter</title>
-    <link rel="stylesheet" href="main.css">
-  </head>
-  <body>
-    <header>
-      <div id="container">
-        <h1>SPWriter</h1>
-        <h3>The Focus Orientated Writing Software</h3>
-      </div>
-    </header>
-    <nav id="headerbar">
-      <div id="headerTitle">SPWriter</div>
-      <div id="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <ul class="navLinks">
-        <li><a href="">Home</a></li>
-        <li><a href="about-me">Pricing</a></li>
-        <li><a href="writing/editor" class="editor">Editor</a></li>
-      </ul>
-    </nav>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="noteList">
+            <div class="header">
+                <div>SPWriter</div>
+            </div>
+            <div class="noteSelection">
+                <div class="addNote" onclick="addNote()">+</div>
+            </div>
+            <div class="buildDetails">
+                <p>v1.0.0</p>
+            </div>
+        </div>
+        <div class="noteSpace"></div>
+    </body>
 </html>
